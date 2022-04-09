@@ -29,55 +29,69 @@
     }
 
       .vcard > .photo {
-        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('/me.jpeg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
       }
-
+      
       .vcard > .desc {
-        font-size: 1.5em;
-        color: black;
-        text-align: center;
-        padding: .5em;
-        position: relative;
-        top: -6em;
-        background: rgba(255, 255, 255, 0.8);
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
       }
-
-      .vcard > .links {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 100%;
-        position: relative;
-        padding: 1em 0;
-        top: -10em;
-        background: rgba(255, 255, 255, 0.8);
-      }
-        .vcard > .links > a {
-          color: inherit;
-          transition: opacity .2s ease-in-out;
-          opacity: 0.8;
+        .vcard > .desc > .bragging {
+          font-size: 1.5em;
+          color: black;
+          text-align: center;
+          padding: .5em;
+          background: rgba(255, 255, 255, 0.8);
         }
-          .vcard > .links > a:hover {
-            opacity: 1.0;
+
+        .vcard > .desc > .links {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          width: 100%;
+          padding: 1em 0;
+          background: rgba(255, 255, 255, 0.8);
+        }
+          .vcard > .desc > .links > a {
+            color: inherit;
+            transition: opacity .2s ease-in-out;
+            opacity: 0.8;
           }
+            .vcard > .desc > .links > a:hover {
+              opacity: 1.0;
+            }
   </style>
 
   <body>
     <div class="vcard">
 
-      <img src="me.jpeg" class="photo">
+      <div class="photo"></div>
 
-      <p class="desc">
-        I do <strong>Math</strong>.<br/>
-        Often enough, it means <strong>Software Development</strong>.
-      </p>
+      <div class="desc">
 
-      <nav class="links">
-        <a class="skype" href="https://t.me/gbezyuk">t.me/gbezyuk</a>
-        <a target="_blank"  href="https://github.com/gbezyuk"><img style="width: 2em" src="./icons/github.svg"></a>
-        <a target="_blank" href="https://vk.com/gbezyuk"><img style="width: 2em" src="./icons/vk.svg"></a>
-        <a class="email" href="mailto:me@gbezyuk.ru">me@gbezyuk.ru</a>
-      </nav>
+        <p class="bragging">
+          I do <strong>Math</strong>.<br/>
+          Often enough, it means <strong>Software Development</strong>.
+        </p>
+
+        <nav class="links">
+          <a class="skype" href="https://t.me/gbezyuk">t.me/gbezyuk</a>
+          <a target="_blank"  href="https://github.com/gbezyuk"><img style="width: 2em" src="./icons/github.svg"></a>
+          <a target="_blank" href="https://vk.com/gbezyuk"><img style="width: 2em" src="./icons/vk.svg"></a>
+          <a class="email" href="mailto:me@gbezyuk.ru">me@gbezyuk.ru</a>
+        </nav>
+      </div>
 
     </div>
 
