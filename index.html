@@ -18,26 +18,18 @@
   </head>
 
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
     .vcard {
-      margin: .5em .5em 3em;
       color: black;
       font-family: Roboto, Helvetica, Tahoma, Arial, sans-serif;
       position: relative;
     }
 
-      .vcard::after {
-        content: 'GB';
-        position: absolute;
-        right: .5em;
-        top: .5em;
-        font-size: 3em;
-        color: rgba(255, 255, 255, 0.5);
-      }
-
       .vcard > .photo {
-        margin-top: 1em;
         width: 100%;
-        border-radius: 1em 1em 0 0;
       }
 
       .vcard > .desc {
@@ -46,7 +38,7 @@
         text-align: center;
         padding: .5em;
         position: relative;
-        top: -4.25em;
+        top: -6em;
         background: rgba(255, 255, 255, 0.8);
       }
 
@@ -55,7 +47,10 @@
         flex-direction: row;
         justify-content: space-evenly;
         width: 100%;
-        margin-top: -6em;
+        position: relative;
+        padding: 1em;
+        top: -10em;
+        background: rgba(255, 255, 255, 0.8);
       }
         .vcard > .links > a {
           color: inherit;
@@ -73,7 +68,7 @@
       <img src="me.jpeg" class="photo">
 
       <p class="desc">
-        I do <strong>Mathematics</strong>.<br/>
+        I do <strong>Math</strong>.<br/>
         Often enough, it means <strong>Software Development</strong>.
       </p>
 
