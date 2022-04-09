@@ -11,91 +11,95 @@
     <meta property="og:title" content="Grigoriy Beziuk Homepage / VCard" />
     <meta property="og:description" content="Grigoriy Beziuk Homepage / VCard">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://gbezyuk.ru/" />
-    
-    <meta property="og:image" content="http://gbezyuk.ru/me.jpeg" />
-    <meta property="og:image" content="http://gbezyuk.ru/qr_blue.png" />
+    <meta property="og:url" content="https://gbezyuk.ru/" />
 
-    <style>
-      dt { float: left; min-width: 170px;}
-      dd { float: left;}
-    </style>
+    <meta property="og:image" content="https://gbezyuk.ru/me.jpeg" />
+
   </head>
-  <body>
-  	<div class="container" style="margin-top: 2em;">
-  		<div class="jumbotron vcard clearfix">
-        <div class="pull-left">
-          <h1 class="fn">Grigoriy Beziuk</h1>
-          <h2 style="clear: left;">
-            <span class="badge"><span class="glyphicon glyphicon-check"></span>IT-management</span>
-            <span class="badge"><span class="glyphicon glyphicon-check"></span>IT-consulting</span>
-            <a href="cv_en.html"><span class="badge"><span class="glyphicon glyphicon-check"></span>Software Development</span></a>
-            <!--span class="badge"><span class="glyphicon glyphicon-check"></span>Yoga</span-->
-          </h2>
-        </div>
-        <div class="images pull-right">
-          <ul class="nav nav-tabs pull-right">            
-            <li><a href="#qr-code" data-toggle="tab" title="QR code vcard"><span class="glyphicon glyphicon-qrcode"></span></a></li>
-            <li class="active"><a href="#photo" data-toggle="tab" title="image"><span class="glyphicon glyphicon-camera"></span></a></li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane active" id="photo"><img src="me.jpeg" class="img-thumbnail"></div>
-            <div class="tab-pane" id="qr-code"><img src="qr_blue.png" class="img-thumbnail"></div>          
-          </div>          
-        </div>                
-        <dl style="clear: left; display: block; float: left;">
-          <dt>Mail:</dt><dd><a class="email" href="mailto:me@gbezyuk.ru">me@gbezyuk.ru</a></dd>
-          <div><dt>Tel:</dt><dd class="value"><a class="tel" href="tel:+7-963-344-11-80">+7 963 344 11 80</a></dd></div>
-          <dt>Skype:</dt><dd><a class="skype" href="skype:grigory_bezyuk?chat">Grigory_Bezyuk</a></dd>
-        </dl>
-        <div class="links" style="clear: left; display: block; float: left; margin-top: 1em;">
-          <p>
-            <a class="btn btn-primary btn-lg" role="button" href="http://vk.com/id85082">VK.com</a>
-            <a class="btn btn-primary btn-lg" role="button" href="https://www.facebook.com/grigory.bezyuk">Facebook</a>
-          </p>
-          <p>
-            <a class="btn btn-primary btn-lg" role="button" href="http://github.com/gbezyuk">GitHub</a>
-            <a class="btn btn-primary btn-lg" role="button" href="http://bitbucket.org/gbezyuk">BitBucket</a>
-          </p>
-          <p>
-            <a class="btn btn-info btn-lg" role="button" href="https://moikrug.ru/grigoriy-bezyuk">Мой Круг</a>
-            <!--a class="btn btn-primary btn-lg" role="button" href="http://brainstorage.me/skiller">BrainStorage</a-->
-          </p>
-        </div>
-		  </div>
-	  </div>
 
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <style>
+    .vcard {
+      margin: .5em .5em 3em;
+      color: black;
+      font-family: Roboto, Helvetica, Tahoma, Arial, sans-serif;
+      position: relative;
+    }
+
+      .vcard::after {
+        content: 'GB';
+        position: absolute;
+        right: .5em;
+        top: .5em;
+        font-size: 3em;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .vcard > .photo {
+        margin-top: 1em;
+        width: 100%;
+        border-radius: 1em 1em 0 0;
+      }
+
+      .vcard > .desc {
+        font-size: 1.5em;
+        color: black;
+        text-align: center;
+        padding: .5em;
+        position: relative;
+        top: -4.25em;
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      .vcard > .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: -6em;
+      }
+        .vcard > .links > a {
+          color: inherit;
+          transition: opacity .2s ease-in-out;
+          opacity: 0.8;
+        }
+          .vcard > .links > a:hover {
+            opacity: 1.0;
+          }
+  </style>
+
+  <body>
+    <div class="vcard">
+
+      <img src="me.jpeg" class="photo">
+
+      <p class="desc">
+        I do <strong>Mathematics</strong>.<br/>
+        Often enough, it means <strong>Software Development</strong>.
+      </p>
+
+      <nav class="links">
+        <a class="skype" href="https://t.me/gbezyuk">t.me/gbezyuk</a>
+        <a target="_blank"  href="https://github.com/gbezyuk"><img style="width: 2em" src="./icons/github.svg"></a>
+        <a target="_blank" href="https://vk.com/gbezyuk"><img style="width: 2em" src="./icons/vk.svg"></a>
+        <a class="email" href="mailto:me@gbezyuk.ru">me@gbezyuk.ru</a>
+      </nav>
+
+    </div>
 
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-      (function (d, w, c) {
-          (w[c] = w[c] || []).push(function() {
-              try {
-                  w.yaCounter23178796 = new Ya.Metrika({id:23178796,
-                          webvisor:true,
-                          clickmap:true,
-                          trackLinks:true,
-                          accurateTrackBounce:true});
-              } catch(e) { }
-          });
+    <script type="text/javascript" >
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-          var n = d.getElementsByTagName("script")[0],
-              s = d.createElement("script"),
-              f = function () { n.parentNode.insertBefore(s, n); };
-          s.type = "text/javascript";
-          s.async = true;
-          s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-          if (w.opera == "[object Opera]") {
-              d.addEventListener("DOMContentLoaded", f, false);
-          } else { f(); }
-      })(document, window, "yandex_metrika_callbacks");
+      ym(23178796, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true
+      });
     </script>
-    <noscript><div><img src="//mc.yandex.ru/watch/23178796" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript><div><img src="https://mc.yandex.ru/watch/23178796" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
     <script>
